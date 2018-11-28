@@ -1,9 +1,7 @@
 public class Utils {
-    public static void main(String[] args) {
-        System.out.println("strConcat: " + concatenateWords("a", "b") + ". resFact: " + computeFactorial(5));
-    }
-
     public static int computeFactorial(int i) {
+        if (i <= 0)
+            throw new ArithmeticException();
         if (i == 1) {
             return 1;
         }
