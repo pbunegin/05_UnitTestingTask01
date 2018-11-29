@@ -1,8 +1,8 @@
 public class Utils {
     public static long computeFactorial(long i) {
-        if (i <= 0)
+        if (i < 0)
             throw new ArithmeticException();
-        if (i == 1) {
+        if (i == 1 || i == 0) {
             return 1;
         }
         i *= computeFactorial(i - 1);

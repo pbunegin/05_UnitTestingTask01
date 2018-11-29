@@ -11,9 +11,9 @@ class UtilsTest {
     void testComputeFactorial() {
         assertEquals(120,Utils.computeFactorial(5));
         assertEquals(1,Utils.computeFactorial(1));
-        assertNotEquals(0,Utils.computeFactorial(1));
+        assertNotEquals(1,Utils.computeFactorial(0));
         assertThrows(NumberFormatException.class,()->Utils.computeFactorial(Integer.parseInt("sfdg")));
-        assertThrows(ArithmeticException.class,()->Utils.computeFactorial(0));
+        assertThrows(ArithmeticException.class,()->Utils.computeFactorial(-100));
         assertThrows(ArithmeticException.class,()->Utils.computeFactorial(-5));
     }
 
