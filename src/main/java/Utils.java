@@ -1,5 +1,5 @@
 public class Utils {
-    public static int computeFactorial(int i) {
+    public static long computeFactorial(long i) {
         if (i <= 0)
             throw new ArithmeticException();
         if (i == 1) {

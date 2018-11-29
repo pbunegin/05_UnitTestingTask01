@@ -30,8 +30,8 @@ class UtilsTest {
 
     @Test
     void testFactorialWithTimeout(){
-        int num = (int) (Math.random()*200);
-        assertTimeoutPreemptively(Duration.ofNanos(1000),()->Utils.computeFactorial(num));
-        assertTimeoutPreemptively(Duration.ofMillis(10),()->Utils.computeFactorial(num));
+        long num = (long) (Math.random()*10);
+        assertTimeoutPreemptively(Duration.ofNanos(100),()->Utils.computeFactorial(num));
+        assertTimeoutPreemptively(Duration.ofMillis(1),()->Utils.computeFactorial(num));
     }
 }
